@@ -1,0 +1,23 @@
+/*.menuitem {
+    display:inline-block;
+    width:150px;
+}
+.menuitem > a {
+    color:red;
+}*/
+/* Je kunt het ook via deze manier doen maar dan zijn niet alle li en a elementen geselecteert
+li{
+    display:inline-block;
+    width:150px;
+}
+li > a{
+    color:red;
+}
+ */
+li{
+    display:inline-block;
+    width:150px;
+}
+a{
+    color:red;
+}
