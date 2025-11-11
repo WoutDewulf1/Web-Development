@@ -1,0 +1,13 @@
+a.icon-link {
+    background-image: url('link-icon.jpg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 16px 16px;
+    padding-left: 22px;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a.icon-link:hover {
+    text-decoration: underline;
+}
