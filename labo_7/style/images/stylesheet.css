@@ -1,0 +1,32 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    margin: auto;
+}
+header > h1{
+    color: white;
+    background-image: url("header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    padding-bottom: 50px;
+}
+nav{
+    background-color: black;
+    color: black;
+    padding-top: 20px;
+}
+nav a{
+    text-decoration: none;
+    color: limegreen;
+    font-weight: bold;
+}
+article{
+    background-color: lightgrey;
+    margin: auto;
+}
+h2{
+    text-decoration: underline;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}

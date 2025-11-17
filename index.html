@@ -1,55 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title><Title></title>
+    <title>Web Development I</title>
+    <style>
+        /* ===== Algemene stijl ===== */
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #1a1a1a;
+            font-size: 2.2em;
+            border-bottom: 3px solid #4a90e2;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        h2 {
+            color: #4a90e2;
+            margin-top: 10px;
+            font-size: 1.3em;
+        }
+
+        /* ===== Container voor elke sectie ===== */
+        section {
+            max-width: 800px;
+            background: #fff;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0078d7;
+        }
+
+        a:hover {
+            color: #005bb5;
+        }
+
+        ol li::before {
+            content: "↪ ";
+            color: grey;
+        }
+
+        ul > li > h2::before {
+            content: "📘 ";
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 50px;
+            padding-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
-<h1>Web Development I</h1>
-<h1>HTML</h1>
-<ul>
-    <li>
-        <h2>Labo 2</h2>
-        <ol>
-            <li><a href="labo_2/opdracht_2.html">Opdracht 2</a></li>
-            <li><a href="labo_2/opdracht_3.html">Opdracht 3</a></li>
-            <li><a href="labo_2/opdracht_4.html">Opdracht 4</a></li>
-            <li><a href="labo_2/opdracht_5.html">Opdracht 5</a></li>
-            <li><a href="labo_2/opdracht_8.html">Opdracht 8</a></li>
-            <li><a href="labo_2/voorbeeld%20headings.html">Opdracht 9</a></li>
-        </ol>
-    </li>
-    <li>
-        <h2>Labo 3</h2>
-        <ol>
-            <li><a href="labo_3/homepage">Opdracht 4: Homepage</a></li>
-            <li><a href="labo_3/contactinformatie">Opdracht 5: Contactinformatie</a></li>
-            <li><a href="labo_3/opleidingsaanbod">Opdracht 6: Opleidingsaanbod</a></li>
-            <li><a href="labo_3/homepage%20uitbreiding">Opdracht 7: Homepage uitbreiding</a></li>
-        </ol>
-    </li>
-    <li>
-        <h2>Labo 4</h2>
-        <ol>
-            <li><a href="labo_4">Opdracht 5: Homepage opsplitsen</a></li>
-        </ol>
-    </li>
-</ul>
-<h1>CSS</h1>
-<ul>
-    <li>
-        <h2>Labo 5</h2>
-    </li>
-    <li>
-        <h2>Labo 6</h2>
-        <ol>
-            <li><a href="labo_6/_bedrijfswebsite/index.html">Opdracht 1</a></li>
-            <li><a href="labo_6/CV">Opdracht 3:CV</a></li>
-            <li><a href="labo_6/Opdracht%204">Opdracht 4</a></li>
-            <li><a href="labo_6/Opdracht%205">Opdracht 5</a></li>
-            <li><a href="labo_6/Opdracht%206">Opdracht 6</a></li>
-        </ol>
-    </li>
-</ul>
+
+<section>
+    <h1>Web Development I</h1>
+</section>
+<section>
+    <h1>HTML</h1>
+    <ul>
+        <li>
+            <h2>Labo 2</h2>
+            <ol>
+                <li><a href="labo_2/opdracht_2.html">Opdracht 2</a></li>
+                <li><a href="labo_2/opdracht_3.html">Opdracht 3</a></li>
+                <li><a href="labo_2/opdracht_4.html">Opdracht 4</a></li>
+                <li><a href="labo_2/opdracht_5.html">Opdracht 5</a></li>
+                <li><a href="labo_2/opdracht_8.html">Opdracht 8</a></li>
+                <li><a href="labo_2/voorbeeld%20headings.html">Opdracht 9</a></li>
+            </ol>
+        </li>
+
+        <li>
+            <h2>Labo 3</h2>
+            <ol>
+                <li><a href="labo_3/homepage">Opdracht 4: Homepage</a></li>
+                <li><a href="labo_3/contactinformatie">Opdracht 5: Contactinformatie</a></li>
+                <li><a href="labo_3/opleidingsaanbod">Opdracht 6: Opleidingsaanbod</a></li>
+                <li><a href="labo_3/homepage%20uitbreiding">Opdracht 7: Homepage uitbreiding</a></li>
+            </ol>
+        </li>
+
+        <li>
+            <h2>Labo 4</h2>
+            <ol>
+                <li><a href="labo_4">Opdracht 5: Homepage opsplitsen</a></li>
+            </ol>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h1>CSS</h1>
+    <ul>
+        <li>
+            <h2>Labo 5</h2>
+        </li>
+        <li>
+            <h2>Labo 6</h2>
+            <ol>
+                <li><a href="labo_6/_bedrijfswebsite/index.html">Opdracht 1</a></li>
+                <li><a href="labo_6/CV">Opdracht 3: CV</a></li>
+                <li><a href="labo_6/Opdracht%204">Opdracht 4</a></li>
+                <li><a href="labo_6/Opdracht%205">Opdracht 5</a></li>
+                <li><a href="labo_6/Opdracht%206">Opdracht 6</a></li>
+            </ol>
+        </li>
+    </ul>
+</section>
+
+<footer>
+    © 2025 - Web Development I | Gemaakt door Wout Dewulf
+</footer>
+
 </body>
 </html>
