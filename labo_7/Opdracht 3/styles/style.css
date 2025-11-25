@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+caption {
+    background: rgb(170,170,200);
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 8px;
+}
+th {
+    background: rgb(35,37,70);
+    color: rgb(200,190,240);
+    padding: 6px 10px;
+}
+td {
+    border: 1px dotted gray;
+    width: 40px;
+    height: 32px;
+    padding: 4px;
+}
+
+td:first-child, td:last-child {
+    background: rgb(255,220,220);
+}
+
+.other { color: gray; background: rgb(235,235,235); }
+
+.feest { background: rgb(250,120,120) ; }

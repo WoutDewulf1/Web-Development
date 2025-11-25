@@ -1,0 +1,30 @@
+table.vriendentabel {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    margin-top: 1rem;
+}
+
+table.vriendentabel th {
+    background-color: #004aad;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+table.vriendentabel td {
+    padding: 10px;
+    border-bottom: 1px solid #d0d0d0;
+    background-color: #ffffff;
+}
+
+table.vriendentabel tbody tr:nth-child(even) td {
+    background-color: #eef3ff;
+}
+
+table.vriendentabel tbody tr:hover td {
+    background-color: #d8e6ff;
+    transition: background-color 0.2s ease-in-out;
+}
