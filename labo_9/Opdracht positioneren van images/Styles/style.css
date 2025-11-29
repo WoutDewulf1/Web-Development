@@ -1,0 +1,17 @@
+article{
+    border: #1a1a1a solid 1px;
+    margin: 10px;
+    overflow: hidden;
+    font-size: 1.25em;
+}
+article:nth-child(even) img{
+    float: right;
+}
+article:nth-child(odd) img{
+    float: left;
+}
+img{
+    margin: 10px;
+    height: auto;
+    width: auto;
+}

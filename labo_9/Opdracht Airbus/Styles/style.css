@@ -1,0 +1,182 @@
+body{
+    width: 95%; /* 95% breedte voor de centrale container */
+    margin: auto;
+    /* Belangrijk: scrollen is nu ingeschakeld (geen overflow: hidden) */
+}
+
+/* 1. TOP GEBIED (header) */
+header{
+    height: 200px;
+    background-image:url("../images/bgsky3.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+header p{
+    color: darkblue;
+    text-align: center;
+    position: relative;
+}
+header p:first-child{
+    font-size: 300%;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0;
+    padding-top: 20px;
+}
+header p:nth-child(2){
+    font-size: 240%;
+    font-weight: bold;
+}
+header img{
+    /* Vliegtuigafbeelding: tekklein.png */
+    position: absolute;
+    right: 250px;
+    bottom: 60px;
+    z-index: 10;
+}
+
+/* 2. NIEUWSGEBIED (aside / news) */
+aside{
+    width: 25%;
+    background-color:#dddddd;
+    border: 1px solid #999999;
+    float: right;
+    box-sizing: border-box;
+}
+aside h3{
+    background-color:#004aad;
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    padding: 5px 0;
+    margin: 0;
+}
+aside p{
+    color: #666666;
+    font-size: 90%;
+    padding: 10px; /* 10px vrije ruimte aan de zijkanten */
+    margin: 0;
+}
+
+/* 3. HOOFDGEBIED (main) */
+main{
+    /* 75% breedte met 10px ruimte tussen main en aside */
+    width: calc(75% - 10px);
+    float: left;
+    margin-right: 10px; /* De 10px ruimte tussen main en aside */
+    box-sizing: border-box;
+}
+
+/* Introductiegebied (met logo) */
+main > div:first-child{ /* Logo container */
+    float: left;
+    margin-top: 20px; /* Logo: 20px boven */
+    margin-left: 20px; /* Logo: 20px ruimte aan linkerzijde */
+    margin-right: 20px; /* Logo: 20px ruimte aan rechterzijde */
+}
+main p{
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-right:30px; /* Tekst: 30px rechts */
+    text-align: justify; /* Tekst uitgelijnd */
+}
+main p span{ /* Blauwe tekst: blauw gekleurd, vet en cursief */
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* 4. GALERIJGEBIED (figure / gallery) */
+figure{
+    clear: both; /* Ruim de floats op (logo) */
+
+    /* Gebruik CSS Grid om de 3-koloms structuur te garanderen */
+    display: grid;
+
+    /* Max drie foto's op een rij: 3 kolommen van vaste 180px breedte */
+    grid-template-columns: repeat(3, 180px);
+    grid-gap: 20px; /* 20px tussen de fotokaders */
+
+    /* Achtergrondkleur tussen foto’s: #999999. Dit vult de gaten in de grid. */
+    background-color: #999999;
+
+    /* Afstanden: 20px links en rondom de grid */
+    padding: 20px;
+    margin: 0;
+    /* De totale breedte van de figure is nu: 20px (links) + 3*180px + 2*20px (gaps) + 20px (rechts) = 600px */
+}
+
+.foto {
+    width: 100%; /* Maakt gebruik van de 180px van de grid kolom */
+    height: 180px; /* Foto’s: 180px x 180px */
+    box-sizing: border-box;
+
+    padding: 10px; /* Fotokader: Witte ruimte van 10px rondom */
+    background-color: white; /* De binnenste ruimte is wit */
+
+    /* Rand: 1px stippellijn (white/#999999) - de witte lijn is de border, de grijze is de achtergrond van de figure */
+    border: 1px dashed white;
+    outline: 1px dashed #999999; /* Gebruik outline voor de tweede stippellijn */
+    outline-offset: -1px; /* Zorgt dat de outline over de border ligt */
+
+    position: relative;
+    overflow: hidden;
+}
+.foto img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 5. ONDERKANT (section / bottom) */
+section{
+    background-color: #666666;
+    color: white;
+    clear: both; /* RUIM DE FLOATS OP */
+    display: flex;
+    padding: 20px 0;
+    width: 100%;
+    font-size: 1em;
+}
+section div {
+    /* Blokken: 120px vrije ruimte aan de linkerkant (voor de eerste div) */
+    padding-left: 120px;
+}
+section div:first-child{
+    flex-basis: 50%;
+}
+section div:last-child{
+    padding-left: 120px; /* Ruimte tussen de blokken */
+    flex-basis: 50%;
+}
+section ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section ul ul{
+    list-style-type: circle;
+    padding-left: 20px;
+}
+section li {
+    line-height: 2em; /* Lijnhoogte van 2ems */
+}
+section a{
+    color: white;
+    text-decoration: none;
+}
+section a:hover{
+    color: red; /* Hyperlinks worden tijdelijk rood bij hover */
+}
+
+/* 6. COPYRIGHTGEBIED (footer / copyright) */
+footer{
+    background-color: white;
+    color: black;
+    text-align: center;
+    clear: both;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
