@@ -71,7 +71,7 @@ main{
 /* Introductiegebied (met logo) */
 main > div:first-child{ /* Logo container */
     float: left;
-    margin-top: 20px; /* Logo: 20px boven */
+    margin-top: 30px; /* Logo: 20px boven */
     margin-left: 20px; /* Logo: 20px ruimte aan linkerzijde */
     margin-right: 20px; /* Logo: 20px ruimte aan rechterzijde */
 }
