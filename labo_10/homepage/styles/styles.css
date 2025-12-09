@@ -1,0 +1,9 @@
+.custom-accent-color {
+    color: #0077cc;
+}
+.section-title {
+    border-bottom: 3px solid #004aad;
+    padding-bottom: .5rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
