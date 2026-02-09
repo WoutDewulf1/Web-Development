@@ -1,0 +1,20 @@
+.checklist {
+    list-style-type: none;
+}
+
+.checklist li:before {
+    content: "\2610"; /* zonder vinkje */
+}
+
+li.checked:before {
+    content: "\2611"; /* met vinkje */
+}
+
+/*
+Merk op dat de li.checked in de onderste CSS-regel
+niet kan vervangen worden door .checked wegens de
+specificiteit, zelfs niet als je de volgorde omkeert.
+
+Probeer dit beslist eens uit!
+*/
+

@@ -1,0 +1,9 @@
+.menu > li {
+    display:inline-block;
+    width:150px;
+}
+
+.menu > li > a {
+    /* of een korter met selector ".menu a", maar dat is niet exact hetzelfde */
+    color:red;
+}

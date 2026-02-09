@@ -1,0 +1,108 @@
+html{
+  margin:0px;
+  padding:0px;}
+
+
+body {
+  font: 1.2em Verdana, Helvetica, Arial, sans-serif;
+}
+
+#wrapper{
+  width: 95%;
+  margin-right: auto;  /*2.5*/
+  margin-left: auto;   /*2.5*/
+
+}
+#imgHeader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size:           150%;
+}
+
+h1, h2 {
+  color:               #007e7e;
+}
+
+h2 {
+  font-size:           130%;
+
+}
+
+
+#elixirs {
+  width: 30%;
+  float: right;
+  border:1px solid #007e7e;
+  padding: 2%;
+  box-sizing: border-box;
+  text-align:          center;
+  background:    url("../images/cocktail.gif")repeat-x;
+  line-height:         1;
+}
+
+
+#content{
+  float: left;
+  width: 70%;
+  padding-right:  8px;
+  box-sizing: border-box;
+}
+#elixirs h1 {
+  color:               black;
+}
+
+#elixirs h2 {
+  color:               #d12c47;
+}
+
+#guarantee {
+  line-height:         1.9em;
+  font-style:          italic;
+  font-family:         Georgia, "Times New Roman", Times, serif;
+  color:               #444444;
+  border:              1px dashed white;
+
+  padding:  25px 25px 25px 80px;
+  margin:              30px;
+  background:   #a7cece url(../images/background.gif) no-repeat top left;
+
+}
+
+footer{
+  clear:both;
+  font-size:           50%;
+  text-align:          center;
+  line-height:         normal;
+  margin-top:          30px;
+}
+
+.cd {
+  font-style:          italic;
+}
+
+.artist {
+  font-weight:         bold;
+}
+
+a:link {
+  color:               #007e7e;
+}
+
+a:visited {
+  color:               #333333;
+}
+
+#elixirs a:link {
+  color:               #007e7e;
+}
+
+
+
+#elixirs a:hover {
+  background:          #f88396;
+  color:               #0d5353;
+}

@@ -1,0 +1,89 @@
+/*
+
+Deze tweede oplossing veralgemeent de eerste oplossing.
+
+Voordelen :
+    Combineerbaar met andere tabellen op de pagina
+        door toevoegen calendar class aan <table>
+
+    Bruikbaar voor eender welke maand
+        Vrije dag via class, dus meerdere mogelijk
+        op voorwaarde dat kolommen voor weekend dagen dezelfde blijft
+
+    Meerdere maanden per pagina mogelijk (zelfde layout, zelfde weekendkolommen)
+
+    Nieuwe classes maken de CSS eenvoudiger te begrijpen
+        beide hoofdingen 'monthHeading' en 'dayHeading'
+        dagen van andere maanden met 'previousMonth' en 'nextMonth'
+
+    HTML bevat table met thead+tbody met beide hoofdingen in thead
+
+    Duplicatie CSS-regels vermeden door samengestelde selectoren (met komma tussen de selectoren)
+
+Het semantisch concept 'week' komt niet voor als class
+    toevoeging zou niks interessants opleveren qua css
+
+Het semantisch concept 'weekend' komt niet voor als class
+    afweging inspanning in html vs css
+    als je in css een .weekend selector wil zien
+        moet je in html bij elke weekend cel een 'weekend' class zetten
+    in css kun je het eenvoudiger regelen via first-child en last-child pseudo class selectoren
+
+Behouden :
+    vrije dag in weekend geeft voorrang aan vrije dag styling
+    weekend cellen selecteren op basis van first-child en last-child
+
+Interessante wijziging om eens iets met specificiteit te doen :
+    dag in volgende/vorige maand geeft (qua styling) niet alleen voorrang aan weekenddag maar ook aan vrije dag
+
+Voorrang :
+    Voorrang qua styling wordt bepaald door volgorde CSS-regels ivm dag andere maand, weekend en vrije dag
+
+*/
+@charset "utf-8";
+
+table.calendar {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.calendar td {
+    border: thin dotted;
+}
+.calendar th {
+    border: thin dotted;
+}
+
+.calendar .monthHeading { /* maand titel */
+    background-color: rgb(170,170,200);
+    color: black;
+}
+.calendar .dayHeading {
+    background-color: rgb(35,37,70);
+    color: rgb(200,190,240);
+    text-align: center;
+}
+
+.calendar td:first-child, .calendar td:last-child { /* weekend regels, resp. zondag en zaterdag */
+    background-color: rgb(255, 220, 220);
+}
+
+.calendar td.free { /* vrije dag */
+    /*
+       de 'td' komt erbij om de specificiteit te verhogen, want
+          .calendar .free
+       heeft een te lage specificiteit om de weekend regels te overrulen
+    */
+    background-color: rgb(250,120,120);
+}
+
+.calendar td.previousMonth, .calendar td.nextMonth { /* dagen van vorige/volgende maand */
+    /*
+       de 'td' komt erbij om de specificiteit te verhogen, want
+          .calendar .previousMonth, .calendar .nextMonth
+       heeft een te lage specificiteit om de weekend regels te overrulen
+    */
+    background-color: #CCC;
+    color: darkgray;
+}
+
+

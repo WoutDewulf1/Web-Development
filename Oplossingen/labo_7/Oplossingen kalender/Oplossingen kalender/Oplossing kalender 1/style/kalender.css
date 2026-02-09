@@ -1,0 +1,82 @@
+/*
+
+Deze eerste oplossing voldoet aan de opdracht, maar is voor verbetering vatbaar :
+
+Moeilijk combineerbaar met andere tabellen op de pagina
+    door ruime element selectoren als table, th, tr en td
+
+Teveel afgestemd op precies die ene maand
+    Vrije dag via id attribuut, dus maar 1 vrije dag mogelijk
+        niet alleen 1 per maand, maar 1 per pagina (wat igv meerdere maanden op 1 pagina?)
+
+    Enkele semantische concepten als komen niet voor als classes
+        'week', 'weekend' of 'dag van andere maand'
+        evt. ook de maand en dag hoofdingen
+
+    Dagen van andere maanden op basis van nummering in DOM-tree
+        first-child, last-child, nth-child
+
+HTML kiest niet duidelijk tussen table met thead+tbody vs table met enkel <th> en <tr>
+    tbody maar geen thead
+    daghoofding staat in tbody
+
+Duplicatie CSS-regels
+    weekend dagen
+    dagen van andere maanden
+
+Voorrang :
+    vrije dag in weekend geeft voorrang aan vrije dag styling boven weekend styling
+    dag in volgende/vorige maand geeft voorrang aan weekenddag styling en maar niet aan vrije dag styling
+
+*/
+
+@charset "utf-8";
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th{ /* maand titel */
+    background-color: rgb(170,170,200);
+    color: black;
+    border: 1px solid black;
+}
+tr:first-child td{ /* dag titel */
+    background-color: rgb(35,37,70);
+    color: rgb(200,190,240);
+    text-align: center;
+    font-weight: bold;
+}
+td:first-child{ /* zondag, weekend */
+    background-color:rgb(255, 220, 220);
+}
+td:last-child{ /* zaterdag, weekend */
+    background-color: rgb(255, 220, 220);
+}
+td{
+    border: thin dotted;
+   
+}
+tr:nth-child(2) td:first-child{ /* dag v vorige maand */
+    background-color: #CCC;
+    color: darkgray;
+}
+tr:last-child td:nth-child(5){ /* dag v volgende maand */
+    background-color: #CCC;
+    color: darkgray;
+}
+tr:last-child td:nth-child(6){ /* dag v volgende maand */
+    background-color: #CCC;
+    color: darkgray;
+}
+tr:last-child td:nth-child(7){ /* dag v volgende maand */
+    background-color: #CCC;
+    color: darkgray;
+}
+
+.free { /* vrije dag */
+    background-color: rgb(250,120,120);
+}
+
+
