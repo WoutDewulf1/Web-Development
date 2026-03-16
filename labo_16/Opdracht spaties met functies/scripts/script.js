@@ -1,5 +1,6 @@
 const setup = () => {
-
+    let btnVerwerk = document.getElementById("btnVerwerk");
+    btnVerwerk.addEventListener("click", toonResultaat);
 }
 const maakMetSpaties = (inputText) => {
     let result = "";

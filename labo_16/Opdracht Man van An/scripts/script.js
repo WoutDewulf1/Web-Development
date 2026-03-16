@@ -1,6 +1,8 @@
 const setup = () => {
-    const tekst = "De man van An geeft geen hand aan ambetante verwanten";
-    const zoekterm = "an";
+    const tekst = "De man van An geeft geen hand aan ambetante verwanten".toLowerCase();
+    const zoekterm = "an".toLowerCase();
+
+    
     let teller = 0;
     let index = tekst.indexOf(zoekterm);
 

@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+}
+.form-rij {
+    margin-bottom: 10px;
+}
+/* Zorgt ervoor dat alle labels aan de linkerkant even breed zijn */
+.hoofdlabel {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+}
+select[multiple] {
+    width: 120px;
+}
+button {
+    margin-top: 15px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+<div class="form-rij">
+    <label class="hoofdlabel" for="isRoker">Is roker</label>
+    <input type="checkbox" id="isRoker">
+</div>
+
+<div class="form-rij">
+    <label class="hoofdlabel">Moedertaal</label>
+    <input type="radio" name="taal" id="taal_nl" value="nl">
+    <label for="taal_nl">Nederlands</label>
+
+    <input type="radio" name="taal" id="taal_fr" value="fr">
+    <label for="taal_fr">Frans</label>
+
+    <input type="radio" name="taal" id="taal_en" value="en">
+    <label for="taal_en">Engels</label>
+</div>
+
+<div class="form-rij">
+    <label class="hoofdlabel" for="buurland">Favoriete buurland</label>
+    <select id="buurland">
+        <option value="Nederland">Nederland</option>
+        <option value="Frankrijk">Frankrijk</option>
+        <option value="Duitsland">Duitsland</option>
+    </select>
+</div>
+
+<div class="form-rij">
+    <label class="hoofdlabel" for="bestelling">Bestelling</label>
+    <select id="bestelling" multiple size="6">
+        <option value="aardappelen">aardappelen</option>
+        <option value="brood">brood</option>
+        <option value="melk">melk</option>
+        <option value="biefstuk">biefstuk</option>
+        <option value="chips">chips</option>
+        <option value="krant">krant</option>
+    </select>
+</div>
+
+<button id="toonResultaatBtn">Toon resultaat</button>
+</body>
+<script src="scripts/script.js"></script>
+</html>

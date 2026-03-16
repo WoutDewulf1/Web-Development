@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+.rij {
+    margin-bottom: 10px;
+}
+label {
+    display: inline-block;
+    width: 150px;
+}
+.fout-kader {
+    border: 2px solid red;
+}
+.fout-tekst {
+    color: red;
+    margin-left: 10px;
+}

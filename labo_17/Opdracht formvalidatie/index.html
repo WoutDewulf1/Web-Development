@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="styles/stylesheet.css" rel="stylesheet">
+</head>
+<body>
+
+<form id="mijnFormulier">
+    <div class="rij">
+        <label for="voornaam">Voornaam:</label>
+        <input type="text" id="voornaam">
+        <span class="fout-tekst" id="err-voornaam"></span>
+    </div>
+
+    <div class="rij">
+        <label for="familienaam">Familienaam:</label>
+        <input type="text" id="familienaam">
+        <span class="fout-tekst" id="err-familienaam"></span>
+    </div>
+
+    <div class="rij">
+        <label for="datum">Geboortedatum:</label>
+        <input type="text" id="datum" placeholder="jjjj-mm-dd">
+        <span class="fout-tekst" id="err-datum"></span>
+    </div>
+
+    <div class="rij">
+        <label for="email">E-mail:</label>
+        <input type="text" id="email">
+        <span class="fout-tekst" id="err-email"></span>
+    </div>
+
+    <div class="rij">
+        <label for="kinderen">Aantal kinderen:</label>
+        <input type="text" id="kinderen">
+        <span class="fout-tekst" id="err-kinderen"></span>
+    </div>
+
+    <button type="submit">Valideer</button>
+</form>
+
+</body>
+<script src="scripts/script.js"></script>
+</html>
