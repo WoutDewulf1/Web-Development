@@ -1,0 +1,12 @@
+#playField {
+    width: 600px;
+    height: 800px;
+    border: 1px solid black;
+    position: relative;
+    margin-top: 10px;
+}
+
+#target {
+    position: absolute;
+    display: none; /* Verbergen tot het spel start */
+}

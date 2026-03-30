@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <style>
+        #myDIV {
+            border: 1px solid black;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<p>
+    Klik op de knop om een p-element aan te maken.
+</p>
+
+<button onclick="voegParagraafToe()">Voeg p-element toe</button>
+<br><br>
+
+<div id="myDIV">
+    Dit is een div-element
+</div>
+
+<script>
+    function voegParagraafToe() {
+        // 1. Maak een nieuw p-element aan
+        const nieuweParagraaf = document.createElement("p");
+
+        // 2. Voeg tekst toe aan het p-element
+        nieuweParagraaf.textContent = "Dit is een nieuw p-element!";
+
+        // 3. Selecteer de div en voeg het p-element daaraan toe
+        const mijnDiv = document.getElementById("myDIV");
+        mijnDiv.appendChild(nieuweParagraaf);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+#speelveld {
+    display: grid;
+    grid-template-columns: repeat(4, 100px); /* 4 kolommen */
+    gap: 10px;
+    margin-top: 20px;
+}
+.kaart {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+.juist { border-color: green; }
+.fout { border-color: red; }
+.verborgen { visibility: hidden; }

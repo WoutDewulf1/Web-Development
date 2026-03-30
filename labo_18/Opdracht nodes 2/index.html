@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8"/>
+    <title>Over mij</title>
+
+    <style>
+        .listitem {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>About Me</h1>
+<ul>
+    <li>Nickname: <span id="nickname"></span></li>
+    <li>Favorieten: <span id="favorites"></span></li>
+    <li>Thuisstad: <span id="hometown"></span></li>
+</ul>
+
+<script>
+    const listItems = document.querySelectorAll('li');
+    listItems.forEach(item => {
+        item.className = 'listitem';
+    });
+
+    const img = document.createElement('img');
+    img.src = 'images/foto.jpeg';
+    img.alt = 'Foto van mij';
+    document.body.appendChild(img);
+</script>
+</body>
+</html>
